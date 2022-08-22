@@ -80,3 +80,10 @@ body {
     transition: 0.5s;
 }
 
+.validation ul li::before {
+    content: '\f192';
+    width: 20px;
+    height: 10px;
+    font-family: fontAwesome;
+    display: inline-block;
+}

@@ -12,7 +12,7 @@
     <div class="box">
         <div class="inputBox">
             <input type="password" placeholder="password here" 
-            id="pswrd">
+            id="pswrd" onkeyup="checkPassword(this.value)">
             <span id="toggleBtn"></span>
         </div>
         <div class="validation">
@@ -28,6 +28,21 @@
     <script>
         let pswrd = document.getElementById('pswrd');
         let toggleBtn = document.getElementById('toggleBtn');
+
+        let lowerCase = document.getElementById('lower');
+        let upperCase = document.getElementById('upper');
+        let digit = document.getElementById('number');
+        let spesialChar = document.getElementById('special');
+        let minlength = document.getElementById('lenght');
+
+        function checkPassword(data) {
+            // javascript regular expresion pattern
+            const lower = new RegExp('(?=.*[a-z])');
+            const upper = new RegExp('(?=.*[A-Z])');
+            const number = new RegExp('(?=.*[0-9])');
+            const special = new RegExp('(?=.*[!@#\$%\^&\*])');
+            const lenght = new RegExp('(?=.{8,}');
+        }
 
         // show hide password
         toggleBtn.onclick = function() {
